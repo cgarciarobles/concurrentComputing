@@ -4,6 +4,20 @@ import os
 arreglo = [10,20,30,40,50]
 banderaBloqueado = False
 
+"""
+Programa para escritura y lectura sobre un vector de enteros.
+Las lecturas concurrentes son permitidas en este caso.
+Al momento de realizar una escritura o reescritura en el vector,
+el proximo proceso que solicite acceder, no podra hacerlo
+ya que estara bloqueado por la escritura del turno anterior.
+
+===============================================================
+Carlos Garcia Robles 15744-14
+GitHub @cgarciarobles
+===============================================================
+"""
+
+
 def leccA():
     global banderaBloqueado
     if (banderaBloqueado == False):
